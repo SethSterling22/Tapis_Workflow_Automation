@@ -1,4 +1,6 @@
 from tapipy.tapis import Tapis
+import os
+from pathlib import Path
 from dotenv import load_dotenv
 
 # Load variables from .env into the system environment

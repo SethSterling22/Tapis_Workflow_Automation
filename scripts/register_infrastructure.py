@@ -1,6 +1,8 @@
 import json
 import argparse
 from tapipy.tapis import Tapis
+import os
+from pathlib import Path
 from dotenv import load_dotenv
 
 # Load variables from .env into the system environment
@@ -23,7 +25,7 @@ def get_tapis_client():
     return t
 
 def register_app(t):
-    with open('apps/translator-app/app-definition.json', 'r') as f:
+    with open('apps/translator_app/app_definition.json', 'r') as f:
         app_def = json.load(f)
     t.apps.createApp(**app_def)
     print(f"Successfully registered App: {app_def['id']}")
