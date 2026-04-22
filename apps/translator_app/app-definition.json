@@ -6,6 +6,7 @@
     "jobType": "FORK",
     "runtime": "DOCKER",
     "executionSystemId": "tacc.ls6.seth",
+    "archiveOnAppError": true,
     "jobAttributes": {
         "description": "Initial test for the NL to SL pipeline",
         "parameterSet": {
@@ -19,3 +20,4 @@
         }
     }
 }
+

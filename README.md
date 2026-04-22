@@ -15,20 +15,26 @@ This project provides a robust framework for automating scientific workflows usi
 - `scripts/`: Python automation scripts using `tapipy` for infrastructure-as-code (IaC) management.
 
 ```
-tapis_workflow_automation/
+tapis_workflow_automation
+├── .env
+├── .gitignore
+|
+├── .github/
+│   └── workflows/
+│       └── docker-publish.yml
+|
 ├── apps/
 │   └── translator-app/
-│       ├── app-definition.json      # Tapis App registration (JSON)
-│       └── Dockerfile               # Container spec (Python + NLP libs)
-├── workflows/
-│   ├── pipeline-definition.yaml     # Main Tapis Workflow DAG
-│   └── tasks/
-│       └── nlp_engine.py            # Executable script (The "Task")
+│       ├── app-definition.json
+│       ├── Dockerfile
+│       └── hello_world.py
+|
 ├── scripts/
-│   ├── register_infrastructure.py   # Python script using tapipy to automate setup
-│   └── discover_resources.py        # Utility to list and tag metadata
-├── requirements.txt                 # Project dependencies (tapipy, etc.)
-└── README.md                        # Documentation
+│   ├── register_infrastructure.py
+│   └── discover_resources.py
+|
+├── requirements.txt
+└── README.md
 ```
 
 
