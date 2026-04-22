@@ -1,18 +1,18 @@
 {
-    "id": "scientific-processor-app",
-    "version": "1.0.0",
-    "description": "App to process NL into scientific commands",
-    "containerImage": "docker://your-docker-handle/science-image:latest",
-    "jobType": "BATCH",
+    "id": "scientific-nlp-dummy",
+    "version": "0.1.0",
+    "description": "Dummy app hosted on GHCR",
+    "containerImage": "docker://ghcr.io/sethsterling22/tapis-workflow-automation/tapis-dummy-app:latest",
+    "jobType": "FORK",
     "runtime": "DOCKER",
-    "executionSystemId": "your-execution-system",
+    "executionSystemId": "tacc.ls6.seth",
     "jobAttributes": {
+        "description": "Initial test using GHCR image",
         "parameterSet": {
         "appArgs": [
             {
-            "arg": "--input-file",
-            "name": "Input Data",
-            "description": "Path to the data to be processed"
+            "arg": "test_input.txt",
+            "name": "Dummy Input"
             }
         ]
         }
