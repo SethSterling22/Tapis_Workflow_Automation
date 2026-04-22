@@ -5,7 +5,7 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copy the dummy script into the container
-COPY hello_world.py .
+COPY dummy.py .
 
 # Standard execution command
 # Tapis will append the appArgs defined in the JSON to this command
