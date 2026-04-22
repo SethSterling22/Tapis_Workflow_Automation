@@ -1,0 +1,14 @@
+{
+    "id": "tacc.ls6.seth.v3",
+    "description": "LoneStar6 execution system - Apptainer Ready",
+    "systemType": "LINUX",
+    "host": "ls6.tacc.utexas.edu",
+    "defaultAuthnMethod": "PASSWORD",
+    "canExec": true,
+    "rootDir": "/home1/10903/s_sterling22",
+    "jobWorkingDir": "tapis_jobs",
+    "jobRuntimes": [
+        { "runtimeType": "SINGULARITY" } 
+    ],
+    "transmissionProtocols": ["SSH", "SFTP"]
+}

@@ -10,14 +10,10 @@ env_path = base_path / '.env'
 # Carga el archivo .env especificando la ruta exacta
 load_dotenv(dotenv_path=env_path)
 
-# Access them using os.getenv()
-username = os.getenv("USERNAME")
-password = os.getenv("PASSWORD")
-
 def discover_and_tag():
     t = Tapis(base_url='https://tacc.tapis.io', 
-            username=username,
-            password=password)
+            username=os.getenv("USERNAME"), 
+            password=os.getenv("PASSWORD"))
     t.get_tokens()
 
     print("--- Discovering Owned Apps ---")
