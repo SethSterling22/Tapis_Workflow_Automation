@@ -1,3 +1,9 @@
+# Ignore files and directories
+
+# Environment Variables
 .env
 .env.local
 .env.*.local
+
+# Virtual Environments
+tapis-env/
