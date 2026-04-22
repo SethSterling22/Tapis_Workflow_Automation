@@ -2,7 +2,7 @@
     "id": "scientific-nlp-dummy",
     "version": "0.1.0",
     "description": "Dummy Hello World app for Tapis workflow testing",
-    "containerImage": "docker://ghcr.io/sethsterling22/tapis-workflow-automation/tapis-dummy-app:latest",
+    "containerImage": "ghcr.io/sethsterling22/tapis-workflow-automation/tapis-dummy-app:latest",
     "jobType": "FORK",
     "runtime": "DOCKER",
     "executionSystemId": "tacc.ls6.seth",
