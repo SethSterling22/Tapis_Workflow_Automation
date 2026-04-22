@@ -12,7 +12,7 @@ def setup_system_credentials():
             password=os.getenv("PASSWORD"))
     t.get_tokens()
 
-    system_id = "tacc.ls6.seth.v3"
+    system_id = "tacc.ls6.seth.v4" # CHANGE VERSION
     
     print(f"--- Configurando credenciales para {system_id} ---")
     

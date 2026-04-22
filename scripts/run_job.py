@@ -22,7 +22,7 @@ def submit_test_job():
         "name": "scientific-nlp-test-run",
         "appId": "scientific-nlp-dummy",
         "appVersion": "0.1.0",
-        "execSystemId": "tacc.ls6.seth.v3",
+        "execSystemId": "tacc.ls6.seth.v4", # CHANGE VERSION
         "description": "Prueba de ejecución desde contenedor GHCR",
         "archiveOnAppError": True,
         "parameterSet": {
