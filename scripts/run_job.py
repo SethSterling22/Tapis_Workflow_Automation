@@ -20,9 +20,10 @@ def submit_test_job():
     # Configuración del Job mejorada
     job_def = {
         "name": "scientific-nlp-test-run",
-        "appId": "scientific-nlp-dummy",
-        "appVersion": "0.1.0",
-        "execSystemId": "tacc.ls6.seth.v4", # CHANGE VERSION
+        "appId": "scientific-nlp-tacc-native",
+        "appVersion": "1.1.4",
+        "execSystemId": "tacc.ls6.seth.v10", # CHANGE VERSION
+        "execSystemLogicalQueue": "dev-queue",
         "description": "Prueba de ejecución desde contenedor GHCR",
         "archiveOnAppError": True,
         "parameterSet": {

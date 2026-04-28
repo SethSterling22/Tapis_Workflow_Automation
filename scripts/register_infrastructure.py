@@ -30,6 +30,7 @@ def register_app(t):
     except Exception as e:
         print(f"Registration failed: {e}")
 
+
 def register_system(t):
     with open('systems/ls6-system.json', 'r') as f:
         sys_def = json.load(f)

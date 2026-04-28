@@ -1,0 +1,26 @@
+{
+  "id": "hello-world-pipeline",
+  "description": "Pipeline con Base64 manual para evitar error de padding",
+  "type": "workflow",
+  "tasks": [
+    {
+      "id": "task-one",
+      "type": "function",
+      "runtime": "python:3.11-slim",
+      "installer": "pip",
+      "code": "cHJpbnQoJ1Rhc2sgMSBjb21wbGV0ZWQgc3VjY2Vzc2Z1bGx5JykK"
+    },
+    {
+      "id": "task-two",
+      "type": "function",
+      "runtime": "python:3.11-slim",
+      "installer": "pip",
+      "code": "cHJpbnQoJ1Rhc2sgMiBjb21wbGV0ZWQgc3VjY2Vzc2Z1bGx5JykK",
+      "depends_on": [
+        {
+          "id": "task-one"
+        }
+      ]
+    }
+  ]
+}

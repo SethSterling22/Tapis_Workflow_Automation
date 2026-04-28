@@ -1,6 +1,6 @@
 {
-    "id": "tacc.ls6.seth.v4",
-    "description": "LoneStar6 execution system - Apptainer Ready",
+    "id": "tacc.ls6.seth.v10",
+    "description": "LoneStar6 - Fixed Memory Limits",
     "systemType": "LINUX",
     "host": "ls6.tacc.utexas.edu",
     "defaultAuthnMethod": "PASSWORD",
@@ -8,7 +8,25 @@
     "rootDir": "/home1/10903/s_sterling22",
     "jobWorkingDir": "tapis_jobs",
     "jobRuntimes": [
-        { "runtimeType": "SINGULARITY" } 
+        { "runtimeType": "SINGULARITY" }
+    ],
+    "batchScheduler": "SLURM", 
+    "batchDefaultQueue": "dev-queue",
+    "batchLogicalQueues": [
+        {
+            "name": "dev-queue",
+            "hpcQueueName": "development",
+            "maxJobs": 10,
+            "maxJobsPerUser": 5,
+            "minNodeCount": 1,
+            "maxNodeCount": 1,
+            "minCoresPerNode": 1,
+            "maxCoresPerNode": 128,
+            "minMemoryMB": 1,
+            "maxMemoryMB": 256000,
+            "minMinutes": 1,
+            "maxMinutes": 120
+        }
     ],
     "transmissionProtocols": ["SSH", "SFTP"]
 }

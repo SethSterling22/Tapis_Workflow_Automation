@@ -1,20 +1,32 @@
 {
-    "id": "scientific-nlp-dummy",
-    "version": "0.1.1", 
-    "description": "Dummy Hello World app for Tapis workflow testing",
+    "id": "scientific-nlp-tacc-native",
+    "version": "1.1.4",
+    "description": "NLP App usando perfiles nativos de TACC corregido",
     "containerImage": "docker://ghcr.io/sethsterling22/tapis-workflow-automation/tapis-dummy-app:latest",
-    "jobType": "FORK",
-    "runtime": "SINGULARITY", 
-    "executionSystemId": "tacc.ls6.seth.v4",
-    "archiveOnAppError": true,
+    "jobType": "BATCH",
+    "runtime": "SINGULARITY",
+    "executionSystemId": "tacc.ls6.seth.v10",
     "jobAttributes": {
-        "description": "Initial test for the NL to SL pipeline",
+        "maxMinutes": 10,
+        "nodeCount": 1,
+        "coresPerNode": 1,
         "parameterSet": {
+            "schedulerOptions": [
+                {
+                    "name": "profile",
+                    "arg": "--tapis-profile tacc-apptainer",
+                    "description": "Carga el entorno Apptainer de TACC"
+                },
+                {
+                    "name": "queue",
+                    "arg": "-p development",
+                    "description": "Cola de desarrollo en LS6"
+                }
+            ],
             "appArgs": [
                 {
                     "arg": "test_input.txt",
-                    "name": "Dummy Input",
-                    "description": "Input filename for the hello_world script"
+                    "name": "Dummy Input"
                 }
             ]
         }
