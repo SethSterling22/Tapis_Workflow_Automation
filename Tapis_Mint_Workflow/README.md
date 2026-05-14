@@ -40,9 +40,9 @@ graph TD
     DCAT -->|4. Finalize Lineage| Sync
     
     %% Details
-    style MCAT fill:#f9f,stroke:#333,stroke-width:2px
-    style DCAT fill:#bbf,stroke:#333,stroke-width:2px
-    style Pipeline fill:#bfb,stroke:#333,stroke-width:2px
+    style MCAT fill:##3d3d3d,stroke:#333,stroke-width:2px
+    style DCAT fill:##3d3d3d,stroke:#333,stroke-width:2px
+    style Pipeline fill:##3d3d3d,stroke:#333,stroke-width:2px
 
 ```
 
